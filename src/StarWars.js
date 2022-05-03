@@ -3,6 +3,7 @@ import ResultDisplay from "./ResultDisplay";
 const StarWars = () => {
   const [charLookup, setCharLookup] = useState(1);
   const [searchResult, setSearchResult] = useState(null)
+  const [savedList, setSavedList] = useState([])
   const validateInput = (input) => {
     const numInput = parseInt(input);
     return 1 <= numInput && numInput <= 83 && numInput !== 17 && numInput !== 0;
@@ -15,6 +16,10 @@ const StarWars = () => {
     }
     alert("invalid input")
   }
+  const saveResult = () => {
+      setSavedList([...savedList, searchResult])
+  }
+  console.log(savedList)
   return (
     <div>
       <form className="inputForm">
@@ -41,6 +46,10 @@ const StarWars = () => {
         </button>
       </form>
       {searchResult && <ResultDisplay data={searchResult} />}
+      {searchResult && <button onClick={(e) => {
+          e.preventDefault()
+          saveResult()
+      }}>Save</button>}
     </div>
   );
 };
