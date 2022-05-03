@@ -12,3 +12,16 @@
   color: lightgray;
   font-family: Helvetica;
 }
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+}
+.inputForm > label {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.inputForm > label > span {
+  padding: 0.25rem;
+}
