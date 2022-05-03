@@ -25,3 +25,9 @@
 .inputForm > label > span {
   padding: 0.25rem;
 }
+
+.searchResult > ul{
+  list-style: none;
+  text-align: left;
+  margin-left: -1em;
+}

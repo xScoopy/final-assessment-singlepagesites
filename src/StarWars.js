@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ResultDisplay from "./ResultDisplay";
 const StarWars = () => {
   const [charLookup, setCharLookup] = useState(1);
   const [searchResult, setSearchResult] = useState(null)
@@ -39,7 +40,7 @@ const StarWars = () => {
           Submit
         </button>
       </form>
-      {searchResult && <p>{searchResult.name}</p>}
+      {searchResult && <ResultDisplay data={searchResult} />}
     </div>
   );
 };
