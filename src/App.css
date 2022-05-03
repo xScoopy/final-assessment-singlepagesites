@@ -26,8 +26,38 @@
   padding: 0.25rem;
 }
 
-.searchResult > ul{
+.searchResult > ul {
   list-style: none;
   text-align: left;
   margin-left: -1em;
+}
+
+.infoHolder {
+  display: flex;
+  flex-direction: row;
+}
+.characterInfo > ul {
+  list-style: none;
+  text-align: left;
+  margin-left: -1em;
+}
+.characterInfo {
+  border-bottom: double;
+}
+
+.searchHolder {
+  margin: 1rem;
+}
+.listHolder {
+  margin: 0.5rem;
+  padding-left: 2rem;
+}
+.filmHeader {
+  text-align: center;
+}
+button {
+  background-color: transparent;
+  color:aqua;
+  height: 3rem;
+  border-radius: 50%
 }
